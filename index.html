@@ -1,27 +1,250 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <title>Glosario Interactivo</title>
-    <link rel="stylesheet" href="estilos.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Academia de Ciberseguridad</title>
+
+    <link
+        rel="stylesheet"
+        href="estilos.css">
+
 </head>
+
 <body>
 
-<header>
-    <h1>📖 Glosario Interactivo</h1>
+<div class="contenedor">
 
-    <input
-        type="text"
-        id="buscador"
-        placeholder="Buscar una palabra..."
-    >
+    <!--============================
+            ENCABEZADO
+    =============================-->
 
-    <button id="modo">🌙 Modo Oscuro</button>
-</header>
+    <header>
 
-<div id="glosario"></div>
+        <div class="logo">
+
+            🛡 Academia de Ciberseguridad
+
+        </div>
+
+        <div class="marcador">
+
+            🏆
+
+            <span id="puntos">
+
+                0
+
+            </span>
+
+            pts
+
+        </div>
+
+    </header>
+
+
+
+    <!--============================
+            PROGRESO
+    =============================-->
+
+    <section class="progreso">
+
+        <div class="datos">
+
+            <span id="contador">
+
+                Concepto 0 de 50
+
+            </span>
+
+            <span id="porcentaje">
+
+                0%
+
+            </span>
+
+        </div>
+
+        <div class="barra">
+
+            <div
+                class="relleno"
+                id="barra">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!--============================
+            TARJETA
+    =============================-->
+
+    <section
+        class="tarjeta"
+        id="tarjeta">
+
+        <h2 id="titulo">
+
+            ¡Bienvenido!
+
+        </h2>
+
+        <p id="descripcion">
+
+            En esta Academia aprenderás conceptos de
+            Ciberseguridad y después demostrarás
+            lo aprendido respondiendo un reto.
+
+        </p>
+
+    </section>
+
+
+
+    <!--============================
+            PREGUNTA
+    =============================-->
+
+    <section
+        id="zonaPregunta"
+        class="oculto">
+
+        <h2 id="pregunta">
+
+        </h2>
+
+        <div class="opciones">
+
+            <button class="respuesta"></button>
+
+            <button class="respuesta"></button>
+
+            <button class="respuesta"></button>
+
+            <button class="respuesta"></button>
+
+        </div>
+
+    </section>
+
+
+
+    <!--============================
+            MENSAJES
+    =============================-->
+
+    <div
+        id="mensaje"
+        class="mensaje">
+
+    </div>
+
+
+
+    <!--============================
+            BONUS +10
+    =============================-->
+
+    <div
+        id="bonus"
+        class="bonus">
+
+        +10
+
+    </div>
+
+
+
+    <!--============================
+            BOTONES
+    =============================-->
+
+    <div class="controles">
+
+        <button
+            id="btnComenzar">
+
+            ▶ Comenzar
+
+        </button>
+
+        <button
+            id="btnSiguiente"
+            disabled>
+
+            ➜
+
+        </button>
+
+    </div>
+
+
+
+    <!--============================
+            PANTALLA FINAL
+    =============================-->
+
+    <section
+        id="pantallaFinal"
+        class="oculto">
+
+        <h1>
+
+            🎉
+
+        </h1>
+
+        <h2>
+
+            ¡Academia completada!
+
+        </h2>
+
+        <p>
+
+            Has terminado todos los conceptos.
+
+        </p>
+
+        <h3>
+
+            Puntaje Final
+
+        </h3>
+
+        <h2 id="puntosFinal">
+
+            0
+
+        </h2>
+
+        <button
+            id="reiniciar">
+
+            🔄 Volver a jugar
+
+        </button>
+
+    </section>
+
+</div>
+
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>

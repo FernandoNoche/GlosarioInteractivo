@@ -1,80 +1,546 @@
+/*====================================
+            CONFIGURACIÓN
+=====================================*/
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
 body{
-    background:#f4f4f4;
-    transition:.4s;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,#071A52,#0B3C91,#1E88E5);
+
+    color:white;
+
 }
+
+/*====================================
+            CONTENEDOR
+=====================================*/
+
+.contenedor{
+
+    width:90%;
+    max-width:900px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
+/*====================================
+            HEADER
+=====================================*/
 
 header{
-    background:#0066cc;
-    color:white;
-    padding:20px;
-    text-align:center;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:30px;
+
 }
 
-header input{
-    width:300px;
-    padding:12px;
-    margin-top:15px;
-    border:none;
-    border-radius:8px;
+.logo{
+
+    font-size:30px;
+
+    font-weight:bold;
+
 }
 
-button{
-    margin-top:15px;
-    padding:12px 18px;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    background:white;
+.marcador{
+
+    background:#16a34a;
+
+    padding:12px 20px;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
 }
 
-#glosario{
+/*====================================
+        BARRA PROGRESO
+=====================================*/
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    padding:30px;
+.progreso{
+
+    margin-bottom:25px;
+
 }
+
+.datos{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+.barra{
+
+    width:100%;
+
+    height:18px;
+
+    background:rgba(255,255,255,.2);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.relleno{
+
+    width:0%;
+
+    height:100%;
+
+    border-radius:30px;
+
+    background:linear-gradient(90deg,#22c55e,#4ade80);
+
+    transition:width .5s;
+
+}
+
+/*====================================
+            TARJETA
+=====================================*/
 
 .tarjeta{
 
     background:white;
-    border-radius:10px;
-    padding:20px;
-    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+
+    color:#1f2937;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    min-height:220px;
+
+    margin-bottom:25px;
+
     transition:.3s;
-}
 
-.tarjeta:hover{
-
-    transform:scale(1.05);
 }
 
 .tarjeta h2{
 
-    color:#0066cc;
-    margin-bottom:10px;
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+    font-size:32px;
+
 }
 
-.oscuro{
+.tarjeta p{
 
-    background:#1d1d1d;
+    font-size:20px;
+
+    line-height:1.7;
+
+}
+
+/*====================================
+            PREGUNTA
+=====================================*/
+
+#pregunta{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.opciones{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+}
+
+.respuesta{
+
+    border:none;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    background:white;
+
+    color:#111827;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.respuesta:hover{
+
+    transform:translateY(-4px);
+
+    background:#dbeafe;
+
+}
+
+/*====================================
+            MENSAJE
+=====================================*/
+
+.mensaje{
+
+    text-align:center;
+
+    min-height:45px;
+
+    margin-top:20px;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+/*====================================
+            BOTONES
+=====================================*/
+
+.controles{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:30px;
+
+}
+
+.controles button{
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:15px;
+
+    padding:16px 30px;
+
+    font-size:19px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+#btnComenzar{
+
+    background:#2563eb;
+
     color:white;
+
 }
 
-.oscuro .tarjeta{
+#btnComenzar:hover{
 
-    background:#2f2f2f;
+    transform:scale(1.05);
+
+}
+
+#btnSiguiente{
+
+    background:#16a34a;
+
     color:white;
+
 }
 
-.oscuro header{
+#btnSiguiente:disabled{
 
-    background:#111;
+    background:#64748b;
+
+    cursor:not-allowed;
+
+    opacity:.5;
+
+}
+
+/*====================================
+            BONUS
+=====================================*/
+
+.bonus{
+
+    position:fixed;
+
+    left:50%;
+
+    top:45%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:70px;
+
+    color:#22c55e;
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+.bonus.animar{
+
+    animation:bonus .8s;
+
+}
+
+@keyframes bonus{
+
+0%{
+
+opacity:0;
+
+transform:translate(-50%,20px);
+
+}
+
+40%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+transform:translate(-50%,-120px);
+
+}
+
+}
+
+/*====================================
+        RESPUESTAS
+=====================================*/
+
+.correcto{
+
+    background:#22c55e !important;
+
+    color:white !important;
+
+}
+
+.incorrecto{
+
+    background:#ef4444 !important;
+
+    color:white !important;
+
+}
+
+/*====================================
+        SACUDIR TARJETA
+=====================================*/
+
+.error{
+
+animation:error .4s;
+
+}
+
+@keyframes error{
+
+0%{transform:translateX(0);}
+20%{transform:translateX(-8px);}
+40%{transform:translateX(8px);}
+60%{transform:translateX(-8px);}
+80%{transform:translateX(8px);}
+100%{transform:translateX(0);}
+
+}
+
+/*====================================
+        ENTRADA
+=====================================*/
+
+.animar{
+
+animation:entrada .5s;
+
+}
+
+@keyframes entrada{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*====================================
+        FINAL
+=====================================*/
+
+#pantallaFinal{
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+#pantallaFinal h1{
+
+    font-size:90px;
+
+}
+
+#pantallaFinal h2{
+
+    margin-top:20px;
+
+    font-size:40px;
+
+}
+
+#pantallaFinal p{
+
+    margin:20px 0;
+
+    font-size:20px;
+
+}
+
+#pantallaFinal button{
+
+    margin-top:25px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:16px 30px;
+
+    border-radius:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+/*====================================
+            UTILIDADES
+=====================================*/
+
+.oculto{
+
+    display:none;
+
+}
+
+/*====================================
+            RESPONSIVE
+=====================================*/
+
+@media(max-width:768px){
+
+header{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.logo{
+
+    text-align:center;
+
+    font-size:24px;
+
+}
+
+.opciones{
+
+    grid-template-columns:1fr;
+
+}
+
+.tarjeta{
+
+    padding:25px;
+
+}
+
+#pregunta{
+
+    font-size:24px;
+
+}
+
 }
