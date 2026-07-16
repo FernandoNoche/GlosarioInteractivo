@@ -197,10 +197,16 @@ zonaPregunta.classList.add("oculto");
 
 function mostrarPregunta(){
 
+    const dato = conceptos[indice];
+
+    // Oculta el título y deja solo la definición
+    titulo.textContent="📖 Lee la definición";
+
+    descripcion.textContent=dato.definicion;
+
     let opciones = generarOpciones();
 
-    pregunta.textContent =
-    "¿Qué concepto corresponde a esta definición?";
+    pregunta.textContent="¿Qué concepto corresponde a esta definición?";
 
     botones.forEach((boton,i)=>{
 
