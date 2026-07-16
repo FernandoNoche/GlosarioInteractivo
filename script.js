@@ -52,7 +52,56 @@ const conceptos=[
 
 {palabra:"Cookie",definicion:"Archivo que guarda información sobre la actividad y preferencias de navegación de un usuario."},
 
-{palabra:"Correo spam",definicion:"Mensaje electrónico no solicitado, generalmente con fines publicitarios o fraudulentos."}
+{palabra:"Correo spam",definicion:"Mensaje electrónico no solicitado, generalmente con fines publicitarios o fraudulentos."},
+{palabra:"Cracker",definicion:"Persona que accede ilegalmente a sistemas informáticos para causar daños o robar información."},
+
+{palabra:"Criptografía", definicion:"Conjunto de técnicas utilizadas para proteger información mediante cifrado."},
+
+{palabra:"Datos personales",definicion:"Información que permite identificar directa o indirectamente a una persona."},
+
+{palabra:"Defacement", definicion:"Modificación no autorizada de una página web para alterar su contenido original."},
+
+{palabra:"DNS", definicion:"Sistema que traduce nombres de dominio, como google.com, en direcciones IP."},
+
+{palabra:"DNS Spoofing",definicion:"Ataque que falsifica respuestas del sistema DNS para redirigir a los usuarios a sitios fraudulentos."},
+
+{palabra:"Doble factor de autenticación (2FA)",definicion:"Método de seguridad que requiere dos formas de verificación para acceder a una cuenta."},
+
+{palabra:"Escalada de privilegios",definicion:"Técnica utilizada para obtener permisos superiores a los autorizados dentro de un sistema."},
+
+{palabra:"Esteganografía",definicion:"Método para ocultar información dentro de archivos como imágenes, videos o audios."},
+
+{palabra:"Exploit",definicion:"Programa o código que aprovecha una vulnerabilidad para atacar un sistema."},
+
+{palabra:"Firmware",definicion:"Software básico incorporado en dispositivos electrónicos que controla su funcionamiento."},
+
+{palabra:"Fuga de datos",definicion:"Pérdida o divulgación de información confidencial sin autorización."},
+
+{palabra:"Gestor de contraseñas",definicion:"Aplicación que almacena y administra contraseñas de forma segura."},
+
+{palabra:"Gusano",definicion:"Tipo de malware que se replica automáticamente y se propaga por redes y dispositivos."},
+
+{palabra:"Hash",definicion:"Valor generado mediante un algoritmo que representa de forma única un conjunto de datos."},
+
+{palabra:"Honeypot",definicion:"Sistema diseñado para atraer atacantes y estudiar sus métodos sin poner en riesgo sistemas reales."},
+
+{palabra:"HTTPS",definicion:"Versión segura del protocolo HTTP que cifra la información transmitida entre el usuario y el sitio web."},
+
+{palabra:"Ingeniería social",definicion:"Técnica que manipula a las personas para obtener información confidencial o acceso a sistemas."},
+
+{palabra:"Integridad",definicion:"Principio de seguridad que garantiza que los datos no han sido modificados sin autorización."},
+
+{palabra:"IoT",definicion:"Red de dispositivos conectados a Internet que pueden intercambiar información entre sí."},
+
+{palabra:"Keylogger",definicion:"Programa o dispositivo que registra las teclas pulsadas por un usuario para capturar información."},
+
+{palabra:"Lista negra",definicion:"Conjunto de usuarios, direcciones o elementos bloqueados por considerarse riesgosos."},
+
+{palabra:"Malware",definicion:"Software malicioso diseñado para dañar, alterar o acceder sin autorización a sistemas informáticos."},
+
+{palabra:"Phishing",definicion:"Técnica fraudulenta que busca obtener datos personales haciéndose pasar por una entidad confiable."},
+
+{palabra:"Ransomware",definicion:"Tipo de malware que bloquea o cifra archivos y exige un pago para recuperarlos."}
 
 ];
 
